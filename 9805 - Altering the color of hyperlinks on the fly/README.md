@@ -7,7 +7,7 @@ In this :octocat: sample, we will discover how to alter links to other documents
 
 *__getARenderJS().registerDisplayLinkHandler(function (docId, Id, isXFDFAnnotation, displayLinkEvent) {})__*
 
-This method will call you back and inform you at each display of a link from which documentId this link is coming from, its unique ID (this will also be set as ID of the DOM element), a boolean to know if this link is an XFDF annotation or is stored inside the PDF and finally the display event, allowing us to alter the PDF color.
+This method will call you back and inform you at each display of a link from which documentId this link is coming from, its unique ID (this will also be set as ID of the DOM element), a boolean to know if this link is an XFDF annotation or is stored inside the PDF and finally the display event, allowing us to alter the link color.
 
 # The second step: altering the links colors
 
