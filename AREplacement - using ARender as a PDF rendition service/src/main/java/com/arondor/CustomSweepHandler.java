@@ -125,7 +125,7 @@ public class CustomSweepHandler implements SweepActionHandler
 		HttpClient httpclient = new DefaultHttpClient();
 		HttpPost httpPost = new HttpPost(ARENDER_URL + "arendergwt/uploadServlet");
 
-		final File tmpFile = new File(System.getProperty("java.io.tmprdir") + UUID.randomUUID().toString());
+		final File tmpFile = new File(System.getProperty("java.io.tmpdir") + UUID.randomUUID().toString());
 		FileOutputStream fos = new FileOutputStream(tmpFile);
 		IOUtils.copy(stream, fos);
 
