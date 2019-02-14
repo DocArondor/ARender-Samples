@@ -2,7 +2,7 @@
 
 Using *ARender* powerful REST API java client implementation, it is very simple to use ARender as a custom rendition service for Alfresco.
 
-In this sample code, you'll find a ready to build module for Alfresco to deposit into alfresco WEB-INF/lib/ folder. 
+In this sample code, you'll find a ready to build module for Alfresco to deposit into alfresco *WEB-INF/lib/* folder. 
 
 In order to be able to build this artifact, you'll need to be able to access ARender private maven repository and therefore have a valid ARender licence. 
 
@@ -12,11 +12,11 @@ To configure the module, you have to alter into the file named *service-context.
 
 ### 1/ In *pom.xml*, setting the correspond ARender version
 
-By default, the version in this repository is set to 4.0.3-SNAPSHOT.
+By default, the version in this repository is set to **4.0.3-SNAPSHOT**.
 
 You can either build the jar using :
 
-    mvn -Darender.version=\<yourVersionHere\> -DskipTests clean install 
+    mvn -Darender.version=<yourVersionHere> -DskipTests clean install 
     (you want to skip tests unless you have an ARender installation running locally) 
 
 Or alter the following property in the *pom.xml* file : 
