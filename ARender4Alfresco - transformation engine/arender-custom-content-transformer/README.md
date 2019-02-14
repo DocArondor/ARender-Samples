@@ -4,6 +4,8 @@ Using *ARender* powerful REST API java client implementation, it is very simple 
 
 In this sample code, you'll find a ready to build module for Alfresco to deposit into alfresco WEB-INF/lib/ folder. 
 
+In order to be able to build this artifact, you'll need to be able to access ARender private maven repository and therefore have a valid ARender licence. 
+
 ## Configuration
 
 To configure the module, you have to alter into the file named *service-context.xml* the hostname of your rendition server and into the *pom.xml* your current version of ARender in use.  
