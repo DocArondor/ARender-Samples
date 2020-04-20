@@ -1,15 +1,11 @@
 package com.arondor.arender.alfresco.content.transformer;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 
 import org.alfresco.service.cmr.repository.ContentReader;
 import org.alfresco.service.cmr.repository.ContentWriter;
 import org.apache.commons.compress.utils.IOUtils;
+import org.junit.Assert;
 import org.junit.Test;
 import org.mockito.Mockito;
 import org.mockito.invocation.InvocationOnMock;
@@ -24,6 +20,8 @@ public class ARenderContentTransformerWorkerTest
         ARenderContentTransformerWorker contentTransformer = new ARenderContentTransformerWorker();
         ContentReader mockReader = Mockito.mock(ContentReader.class);
         ContentWriter mockWriter = Mockito.mock(ContentWriter.class);
+
+        Assert.assertTrue(contentTransformer.isAvailable());
 
         Mockito.doAnswer(new Answer<InputStream>()
         {
@@ -48,7 +46,15 @@ public class ARenderContentTransformerWorkerTest
 
         contentTransformer.transform(mockReader, mockWriter, null);
         byte[] byteArray = bos.toByteArray();
-        new String(byteArray).startsWith("%PDF");
+        Assert.assertTrue(new String(byteArray).startsWith("%PDF"));
         IOUtils.copy(new ByteArrayInputStream(byteArray), new FileOutputStream("target/alfresco.pdf"));
     }
+
+    @Test
+    public void testWeather() throws Exception
+    {
+        ARenderContentTransformerWorker contentTransformer = new ARenderContentTransformerWorker();
+        Assert.assertTrue(contentTransformer.isAvailable());
+    }
+
 }

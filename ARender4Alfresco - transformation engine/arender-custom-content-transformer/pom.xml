@@ -30,12 +30,8 @@
 		</dependencies>
 	</dependencyManagement>
 
-	<properties>
-		<arender.version>4.0.3-SNAPSHOT</arender.version>
-	</properties>
-
-	<!-- Following dependencies are needed for compiling Java code in src/main/java; 
-		<scope>provided</scope> is inherited for each of the following; for more 
+	<!-- Following dependencies are needed for compiling Java code in src/main/java;
+		<scope>provided</scope> is inherited for each of the following; for more
 		info, please refer to alfresco-platform-distribution POM -->
 	<dependencies>
 		<dependency>
@@ -64,12 +60,6 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>com.arondor.arender</groupId>
-			<artifactId>arondor-arender-client-javarest</artifactId>
-			<version>${arender.version}</version>
-		</dependency>
-
 		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
 		<dependency>
 			<groupId>org.mockito</groupId>
@@ -82,7 +72,7 @@
 
 	<profiles>
 
-		<!-- Brings in the extra Enterprise specific repository classes, if the 
+		<!-- Brings in the extra Enterprise specific repository classes, if the
 			'enterprise' profile has been activated, needs to be activated manually. -->
 		<profile>
 			<id>enterprise</id>

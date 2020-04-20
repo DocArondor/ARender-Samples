@@ -8,27 +8,9 @@ In order to be able to build this artifact, you'll need to be able to access ARe
 
 ## Configuration
 
-To configure the module, you have to alter into the file named *service-context.xml* the hostname of your rendition server and into the *pom.xml* your current version of ARender in use.  
+To configure the module, you have to alter into the file named *service-context.xml* the hostname of your rendition server  
 
-### 1/ In *pom.xml*, setting the correspond ARender version
-
-By default, the version in this repository is set to **4.0.3-SNAPSHOT**.
-
-You can either build the jar using :
-
-    mvn -Darender.version=<yourVersionHere> -DskipTests clean install 
-    (you want to skip tests unless you have an ARender installation running locally) 
-
-Or alter the following property in the *pom.xml* file : 
-
-```xml
-<properties>
-    <arender.version>4.0.3-SNAPSHOT</arender.version>
-</properties>
-```
-
-
-### 2/ In *service-context.xml*, setting the hostname of the rendition server
+### 1/ In *service-context.xml*, setting the hostname of the rendition server
 
 By default, it will contain this value: 
 
